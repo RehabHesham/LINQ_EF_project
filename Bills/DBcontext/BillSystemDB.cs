@@ -22,5 +22,13 @@ namespace Bills.DBcontext
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<Unit> Units { get; set; }   
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Invoive_items> Invoive_Items { get; set; }
+        public virtual DbSet<Sales_Invoice> Sales_Invoices { get; set; }
+
     }
 }

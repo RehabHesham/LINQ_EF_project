@@ -11,13 +11,13 @@ namespace Bills.DBcontext
     public class Item
     {
         [Key]
-        public int it_id { get; set; }
+        public int item_Code { get; set; }
         [Required(ErrorMessage = "ITEM NAME is Required")]
         [StringLength(150)]
         [Index(IsUnique = true)]
-        public string it_name { get; set; }
+        public string item_name { get; set; }
         [StringLength(500)]
-        public string it_notes { get; set; }
+        public string item_notes { get; set; }
         [Range(0,double.MaxValue,ErrorMessage = "BUYING PRICE Must be Greater than or equal Zero")]
         [Column(TypeName ="money")]
         public double buy_price { get; set; }
@@ -26,14 +26,19 @@ namespace Bills.DBcontext
         public double sell_price { get; set; }
 
         [Required(ErrorMessage = "COMPANY NAME is Required")]
-        [ForeignKey("item_comp")]
-        public int comp_id { get; set; }
+        [ForeignKey("item_company")]
+        public int company_id { get; set; }
         [Required(ErrorMessage = "TYPE NAME is Required")]
         [ForeignKey("item_type")]
         public int type_id { get; set; }
+        [Required(ErrorMessage = "UNIT NAME is Required")]
+        [ForeignKey("item_unit")]
+        public int unit_id { get; set; }
 
         //Navigation Property
-        public virtual Company item_comp { get; set; }
+        public virtual Company item_company { get; set; }
         public virtual Type item_type { get; set; }
+        public virtual Unit item_unit { get; set; }
+        public virtual ICollection<Invoive_items> invoive_items { get; set; }
     }
 }

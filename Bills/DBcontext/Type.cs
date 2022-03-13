@@ -12,13 +12,13 @@ namespace Bills.DBcontext
     {
         [Key]
         public int typ_id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "TYPE NAME is Required")]
         [StringLength(150)]
         [Index(IsUnique = true)]
         public string typ_name { get; set; }
         [StringLength(500)]
         public string typ_notes { get; set; }
-        [Required]
+        [Required(ErrorMessage = "COMPANY NAME is Required")]
         [ForeignKey("type_comp")]
         public int comp_id { get; set; }
 

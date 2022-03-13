@@ -8,18 +8,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bills.DBcontext
 {
-    public class Unit
+    public class Employee
     {
         [Key]
-        public int unt_id { get; set; }
-        [Required(ErrorMessage = "UNIT NAME is Required")]
+        public int employee_id { get; set; }
+
+        [Required(ErrorMessage ="Employee name is required")]
         [StringLength(150)]
         [Index(IsUnique = true)]
-        public string unt_name { get; set; }
-        [StringLength(500)]
-        public string unt_notes { get; set; }
+        public string employee_name { get; set; }
 
         //Navigation Property
-        public virtual ICollection<Item> Items { get;}
+        public virtual ICollection<Sales_Invoice> employee_Sales_Invoices { get; set; }
     }
 }
