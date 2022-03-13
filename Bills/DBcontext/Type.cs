@@ -11,18 +11,19 @@ namespace Bills.DBcontext
     public class Type
     {
         [Key]
-        public int Typ_id { get; set; }
+        public int typ_id { get; set; }
         [Required]
         [StringLength(150)]
         [Index(IsUnique = true)]
-        public string Typ_name { get; set; }
+        public string typ_name { get; set; }
         [StringLength(500)]
-        public string Typ_notes { get; set; }
+        public string typ_notes { get; set; }
         [Required]
-        [ForeignKey("Comp")]
-        public int Comp_id { get; set; }
+        [ForeignKey("type_comp")]
+        public int comp_id { get; set; }
 
         //Navigation Property
-        public virtual Company Comp { get; set; }
+        public virtual Company type_comp { get; set; }
+        public virtual ICollection<Item> type_items { get; set; }
     }
 }
