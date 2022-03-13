@@ -8,19 +8,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bills.DBcontext
 {
-    public class Company
+    public class Unit
     {
         [Key]
-        public int Comp_id { get; set; }
+        public int unt_id { get; set; }
         [Required]
         [StringLength(150)]
         [Index(IsUnique = true)]
-        public string Comp_name { get; set; }
+        public string unt_name { get; set; }
         [StringLength(500)]
-        public string Comp_notes { get; set; }
-
-        //Navigation Property
-        public virtual ICollection<Type> Comp_types { get; set; }
-
+        public string unt_notes { get; set; }
     }
 }
