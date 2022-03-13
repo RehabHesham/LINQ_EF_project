@@ -10,9 +10,9 @@ namespace Bills.DBcontext
 {
     public class Invoive_items
     {
-        [ForeignKey("sales_invoice_obj "),Column(Order =1)]
+        [Key,ForeignKey("sales_invoice_obj"),Column(Order =1)]
         public int invoice_id { get; set; }
-        [ForeignKey("item_obj"), Column(Order = 2)]
+        [Key,ForeignKey("item_obj"), Column(Order = 2)]
         public int item_id { get; set; }
         [Required(ErrorMessage = "Quantity is Required")]
         [Range(0.0000001, float.MaxValue, ErrorMessage = "Quantity Must be Greater than Zero")]

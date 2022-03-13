@@ -11,7 +11,7 @@ namespace Bills.DBcontext
     public class Company
     {
         [Key]
-        public int company_id { get; set; }
+        public int compan_id { get; set; }
         [Required(ErrorMessage = "COMPANY NAME is Required”")]
         [StringLength(150)]
         [Index(IsUnique = true)]

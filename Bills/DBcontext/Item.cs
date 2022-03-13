@@ -18,12 +18,10 @@ namespace Bills.DBcontext
         public string item_name { get; set; }
         [StringLength(500)]
         public string item_notes { get; set; }
-        [Range(0,double.MaxValue,ErrorMessage = "BUYING PRICE Must be Greater than or equal Zero")]
         [Column(TypeName ="money")]
-        public double buy_price { get; set; }
-        [Range(0, double.MaxValue,ErrorMessage = "SELLING PRICE Must be Greater than or equal Zero")]
+        public decimal buy_price { get; set; }
         [Column(TypeName = "money")]
-        public double sell_price { get; set; }
+        public decimal sell_price { get; set; }
 
         [Required(ErrorMessage = "COMPANY NAME is Required")]
         [ForeignKey("item_company")]

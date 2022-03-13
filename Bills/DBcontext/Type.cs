@@ -19,11 +19,11 @@ namespace Bills.DBcontext
         [StringLength(500)]
         public string typ_notes { get; set; }
         [Required(ErrorMessage = "COMPANY NAME is Required")]
-        [ForeignKey("type_comp")]
-        public int comp_id { get; set; }
+        [ForeignKey("type_comp_obj")]
+        public int? type_company_id { get; set; }
 
         //Navigation Property
-        public virtual Company type_comp { get; set; }
+        public virtual Company type_comp_obj { get; set; }
         public virtual ICollection<Item> type_items { get; set; }
     }
 }
