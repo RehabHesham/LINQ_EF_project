@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bills.DBcontext;
 
 namespace Bills.ItemForm
 {
@@ -17,6 +18,10 @@ namespace Bills.ItemForm
             InitializeComponent();
             Spliter.Panel2Collapsed = true;
             Spliter.Panel1Collapsed = false;
+            BillSystemDB billSystem = new BillSystemDB();
+            Company c = new Company();
+           // DBcontext.Type type = new DBcontext.Type();
+            //type.type_comp_obj.compan_id = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)

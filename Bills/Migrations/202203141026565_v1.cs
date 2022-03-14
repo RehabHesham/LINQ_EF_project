@@ -70,16 +70,13 @@
                         buy_price = c.Decimal(nullable: false, storeType: "money"),
                         sell_price = c.Decimal(nullable: false, storeType: "money"),
                         company_id = c.Int(nullable: false),
-                        type_id = c.Int(nullable: false),
                         unit_id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.item_Code)
                 .ForeignKey("dbo.Companies", t => t.company_id, cascadeDelete: true)
-                .ForeignKey("dbo.Types", t => t.type_id, cascadeDelete: true)
                 .ForeignKey("dbo.Units", t => t.unit_id, cascadeDelete: true)
                 .Index(t => t.item_name, unique: true)
                 .Index(t => t.company_id)
-                .Index(t => t.type_id)
                 .Index(t => t.unit_id);
             
             CreateTable(
@@ -92,20 +89,6 @@
                     })
                 .PrimaryKey(t => t.compan_id)
                 .Index(t => t.company_name, unique: true);
-            
-            CreateTable(
-                "dbo.Types",
-                c => new
-                    {
-                        typ_id = c.Int(nullable: false, identity: true),
-                        typ_name = c.String(nullable: false, maxLength: 150),
-                        typ_notes = c.String(maxLength: 500),
-                        type_company_id = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.typ_id)
-                .ForeignKey("dbo.Companies", t => t.type_company_id, cascadeDelete: true)
-                .Index(t => t.typ_name, unique: true)
-                .Index(t => t.type_company_id);
             
             CreateTable(
                 "dbo.Units",
@@ -125,17 +108,12 @@
             DropForeignKey("dbo.Invoive_items", "invoice_id", "dbo.Sales_Invoice");
             DropForeignKey("dbo.Invoive_items", "item_id", "dbo.Items");
             DropForeignKey("dbo.Items", "unit_id", "dbo.Units");
-            DropForeignKey("dbo.Items", "type_id", "dbo.Types");
             DropForeignKey("dbo.Items", "company_id", "dbo.Companies");
-            DropForeignKey("dbo.Types", "type_company_id", "dbo.Companies");
             DropForeignKey("dbo.Sales_Invoice", "invoice_employee_id", "dbo.Employees");
             DropForeignKey("dbo.Sales_Invoice", "invoice_client_id", "dbo.Clients");
             DropIndex("dbo.Units", new[] { "unt_name" });
-            DropIndex("dbo.Types", new[] { "type_company_id" });
-            DropIndex("dbo.Types", new[] { "typ_name" });
             DropIndex("dbo.Companies", new[] { "company_name" });
             DropIndex("dbo.Items", new[] { "unit_id" });
-            DropIndex("dbo.Items", new[] { "type_id" });
             DropIndex("dbo.Items", new[] { "company_id" });
             DropIndex("dbo.Items", new[] { "item_name" });
             DropIndex("dbo.Invoive_items", new[] { "item_id" });
@@ -145,7 +123,6 @@
             DropIndex("dbo.Sales_Invoice", new[] { "invoice_employee_id" });
             DropIndex("dbo.Clients", new[] { "client_name" });
             DropTable("dbo.Units");
-            DropTable("dbo.Types");
             DropTable("dbo.Companies");
             DropTable("dbo.Items");
             DropTable("dbo.Invoive_items");

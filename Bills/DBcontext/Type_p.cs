@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bills.DBcontext
 {
-    public class Type
+    public class Type_p
     {
         [Key]
         public int typ_id { get; set; }
@@ -18,9 +18,9 @@ namespace Bills.DBcontext
         public string typ_name { get; set; }
         [StringLength(500)]
         public string typ_notes { get; set; }
-        [Required(ErrorMessage = "COMPANY NAME is Required")]
         [ForeignKey("type_comp_obj")]
-        public int? type_company_id { get; set; }
+        public int company_id { get; set; }
+
 
         //Navigation Property
         public virtual Company type_comp_obj { get; set; }

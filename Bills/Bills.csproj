@@ -65,7 +65,7 @@
     <Compile Include="DBcontext\Invoive_items.cs" />
     <Compile Include="DBcontext\Item.cs" />
     <Compile Include="DBcontext\Sales_Invoice.cs" />
-    <Compile Include="DBcontext\Type.cs" />
+    <Compile Include="DBcontext\Type_p.cs" />
     <Compile Include="DBcontext\Unit.cs" />
     <Compile Include="ItemForm\Item_Form.cs">
       <SubType>Form</SubType>
@@ -73,9 +73,13 @@
     <Compile Include="ItemForm\Item_Form.Designer.cs">
       <DependentUpon>Item_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203131721205_v1.cs" />
-    <Compile Include="Migrations\202203131721205_v1.designer.cs">
-      <DependentUpon>202203131721205_v1.cs</DependentUpon>
+    <Compile Include="Migrations\202203141026565_v1.cs" />
+    <Compile Include="Migrations\202203141026565_v1.designer.cs">
+      <DependentUpon>202203141026565_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203141034595_v2.cs" />
+    <Compile Include="Migrations\202203141034595_v2.designer.cs">
+      <DependentUpon>202203141034595_v2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -83,8 +87,11 @@
     <EmbeddedResource Include="ItemForm\Item_Form.resx">
       <DependentUpon>Item_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203131721205_v1.resx">
-      <DependentUpon>202203131721205_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203141026565_v1.resx">
+      <DependentUpon>202203141026565_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203141034595_v2.resx">
+      <DependentUpon>202203141034595_v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

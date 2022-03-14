@@ -20,7 +20,7 @@ namespace Bills.DBcontext
         public string company_notes { get; set; }
 
         //Navigation Property
-        public virtual ICollection<Type> company_types { get; set; }
+        public virtual ICollection<Type_p> company_types { get; set; }
         public virtual ICollection<Item> company_items { get; set; }
 
     }
