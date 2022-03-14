@@ -19,7 +19,7 @@ namespace Bills.DBcontext
         [StringLength(500)]
         public string typ_notes { get; set; }
         [ForeignKey("type_comp_obj")]
-        public int company_id { get; set; }
+        public int? company_id { get; set; }
 
 
         //Navigation Property

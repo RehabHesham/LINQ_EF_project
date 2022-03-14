@@ -25,10 +25,10 @@ namespace Bills.DBcontext
 
         //[Required(ErrorMessage = "COMPANY NAME is Required")]
         [ForeignKey("item_company")]
-        public int company_id { get; set; }
+        public int? company_id { get; set; }
         //[Required(ErrorMessage = "TYPE NAME is Required")]
         [ForeignKey("item_type")]
-        public int type_id { get; set; }
+        public int? type_id { get; set; }
         //[Required(ErrorMessage = "UNIT NAME is Required")]
         [ForeignKey("item_unit")]
         public int unit_id { get; set; }
