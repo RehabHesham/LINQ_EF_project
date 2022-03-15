@@ -22,6 +22,8 @@ namespace Bills.DBcontext
         [Required(ErrorMessage = "PHONE is Required")]
         [MinLength(14),MaxLength(14)]
         [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"/^01[1,2,0][0-9]{8}$/", ErrorMessage = "Not a valid phone number")]
+
         public String client_phone { get; set; }
 
         //Navigation Property

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bills.ItemForm;
+using Bills.UI;
 
 namespace Bills
 {
@@ -17,7 +17,7 @@ namespace Bills
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Item_Form());
+            Application.Run(new MainForm());
         }
     }
 }
