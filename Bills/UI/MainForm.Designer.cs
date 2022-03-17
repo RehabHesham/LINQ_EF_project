@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pan_header = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pan_aside = new System.Windows.Forms.Panel();
-            this.pan_content = new System.Windows.Forms.Panel();
             this.btn_sales = new System.Windows.Forms.Button();
             this.btn_invoice = new System.Windows.Forms.Button();
             this.btn_client = new System.Windows.Forms.Button();
@@ -41,10 +41,10 @@
             this.btn_home = new System.Windows.Forms.Button();
             this.btn_type = new System.Windows.Forms.Button();
             this.btn_company = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pan_content = new System.Windows.Forms.Panel();
             this.pan_header.SuspendLayout();
-            this.pan_aside.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pan_aside.SuspendLayout();
             this.SuspendLayout();
             // 
             // pan_header
@@ -68,6 +68,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "BILL SYSTEM";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::Bills.Properties.Resources.icon;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pan_aside
             // 
             this.pan_aside.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -85,15 +97,6 @@
             this.pan_aside.Name = "pan_aside";
             this.pan_aside.Size = new System.Drawing.Size(215, 404);
             this.pan_aside.TabIndex = 1;
-            // 
-            // pan_content
-            // 
-            this.pan_content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pan_content.Location = new System.Drawing.Point(215, 46);
-            this.pan_content.Margin = new System.Windows.Forms.Padding(0);
-            this.pan_content.Name = "pan_content";
-            this.pan_content.Size = new System.Drawing.Size(585, 404);
-            this.pan_content.TabIndex = 2;
             // 
             // btn_sales
             // 
@@ -124,6 +127,7 @@
             this.btn_invoice.Size = new System.Drawing.Size(181, 38);
             this.btn_invoice.TabIndex = 6;
             this.btn_invoice.UseVisualStyleBackColor = false;
+            this.btn_invoice.Click += new System.EventHandler(this.btn_invoice_Click);
             // 
             // btn_client
             // 
@@ -219,17 +223,14 @@
             this.btn_company.UseVisualStyleBackColor = false;
             this.btn_company.Click += new System.EventHandler(this.btn_company_Click);
             // 
-            // pictureBox1
+            // pan_content
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::Bills.Properties.Resources.icon;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pan_content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pan_content.Location = new System.Drawing.Point(215, 46);
+            this.pan_content.Margin = new System.Windows.Forms.Padding(0);
+            this.pan_content.Name = "pan_content";
+            this.pan_content.Size = new System.Drawing.Size(585, 404);
+            this.pan_content.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -248,8 +249,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pan_header.ResumeLayout(false);
             this.pan_header.PerformLayout();
-            this.pan_aside.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pan_aside.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

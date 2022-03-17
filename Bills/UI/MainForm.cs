@@ -29,9 +29,10 @@ namespace Bills.UI
             if(myForm != mainForm)
             {
                 mainForm.pan_content.Controls.Clear();
-                myForm.AutoScroll = true;
                 mainForm.pan_content.Controls.Add(myForm);
-                myForm.Show();
+                myForm.ScrollControlIntoView(label1);
+                myForm.Controls[0].Select();
+;               myForm.Show();
             }
         }
 
@@ -43,6 +44,11 @@ namespace Bills.UI
         private void btn_company_Click(object sender, EventArgs e)
         {
             MainForm_Load(new companyForm() { Dock = DockStyle.Fill,TopLevel=false,TopMost=true}, null);
+        }
+
+        private void btn_invoice_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new invoiceForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true}, null);
         }
     }
 }

@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_compName = new System.Windows.Forms.TextBox();
+            this.txt_compNotes = new System.Windows.Forms.RichTextBox();
+            this.btn_compCancle = new System.Windows.Forms.Button();
+            this.btn_compSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,42 +69,42 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Notes :";
             // 
-            // textBox1
+            // txt_compName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(208, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 27);
-            this.textBox1.TabIndex = 4;
+            this.txt_compName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_compName.Location = new System.Drawing.Point(208, 118);
+            this.txt_compName.Name = "txt_compName";
+            this.txt_compName.Size = new System.Drawing.Size(276, 27);
+            this.txt_compName.TabIndex = 4;
             // 
-            // richTextBox1
+            // txt_compNotes
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(208, 170);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(276, 96);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.txt_compNotes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_compNotes.Location = new System.Drawing.Point(208, 170);
+            this.txt_compNotes.Name = "txt_compNotes";
+            this.txt_compNotes.Size = new System.Drawing.Size(276, 96);
+            this.txt_compNotes.TabIndex = 5;
+            this.txt_compNotes.Text = "";
             // 
-            // button2
+            // btn_compCancle
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = global::Bills.Properties.Resources.cancle;
-            this.button2.Location = new System.Drawing.Point(165, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 39);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_compCancle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_compCancle.Image = global::Bills.Properties.Resources.cancle;
+            this.btn_compCancle.Location = new System.Drawing.Point(165, 306);
+            this.btn_compCancle.Name = "btn_compCancle";
+            this.btn_compCancle.Size = new System.Drawing.Size(121, 39);
+            this.btn_compCancle.TabIndex = 7;
+            this.btn_compCancle.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_compSave
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = global::Bills.Properties.Resources.save;
-            this.button1.Location = new System.Drawing.Point(331, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 39);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_compSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_compSave.Image = global::Bills.Properties.Resources.save;
+            this.btn_compSave.Location = new System.Drawing.Point(331, 306);
+            this.btn_compSave.Name = "btn_compSave";
+            this.btn_compSave.Size = new System.Drawing.Size(93, 39);
+            this.btn_compSave.TabIndex = 6;
+            this.btn_compSave.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -121,10 +121,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(568, 374);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_compCancle);
+            this.Controls.Add(this.btn_compSave);
+            this.Controls.Add(this.txt_compNotes);
+            this.Controls.Add(this.txt_compName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -144,9 +144,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_compName;
+        private System.Windows.Forms.RichTextBox txt_compNotes;
+        private System.Windows.Forms.Button btn_compSave;
+        private System.Windows.Forms.Button btn_compCancle;
     }
 }

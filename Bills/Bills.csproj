@@ -67,13 +67,9 @@
     <Compile Include="DBcontext\Sales_Invoice.cs" />
     <Compile Include="DBcontext\Type_p.cs" />
     <Compile Include="DBcontext\Unit.cs" />
-    <Compile Include="Migrations\202203141026565_v1.cs" />
-    <Compile Include="Migrations\202203141026565_v1.designer.cs">
-      <DependentUpon>202203141026565_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202203141034595_v2.cs" />
-    <Compile Include="Migrations\202203141034595_v2.designer.cs">
-      <DependentUpon>202203141034595_v2.cs</DependentUpon>
+    <Compile Include="Migrations\202203170509168_v1.cs" />
+    <Compile Include="Migrations\202203170509168_v1.designer.cs">
+      <DependentUpon>202203170509168_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -90,17 +86,20 @@
     <Compile Include="UI\home_img.Designer.cs">
       <DependentUpon>home_img.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\invoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\invoiceForm.Designer.cs">
+      <DependentUpon>invoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202203141026565_v1.resx">
-      <DependentUpon>202203141026565_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203141034595_v2.resx">
-      <DependentUpon>202203141034595_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203170509168_v1.resx">
+      <DependentUpon>202203170509168_v1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\home_img.resx">
       <DependentUpon>home_img.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\invoiceForm.resx">
+      <DependentUpon>invoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -170,6 +172,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
