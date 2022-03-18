@@ -46,9 +46,36 @@ namespace Bills.UI
             MainForm_Load(new companyForm() { Dock = DockStyle.Fill,TopLevel=false,TopMost=true}, null);
         }
 
+
+        private void btn_type_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new typeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true }, null);
+        }
+
+        private void btn_unit_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new unitform() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true }, null);
+        }
+
+        private void btn_item_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new item() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true}, null);
+        }
+
+        private void btn_client_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new clients() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true }, null);
+        }
+
         private void btn_invoice_Click(object sender, EventArgs e)
         {
-            MainForm_Load(new invoiceForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true}, null);
+            MainForm_Load(new invoiceForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true }, null);
+        }
+
+        private void btn_sales_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(new Report() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true, AutoScroll = true }, null);
+
         }
     }
 }

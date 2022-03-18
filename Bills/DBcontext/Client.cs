@@ -20,13 +20,13 @@ namespace Bills.DBcontext
         [StringLength(250)]
         public string client_address { get; set;}
         [Required(ErrorMessage = "PHONE is Required")]
-        [MinLength(14),MaxLength(14)]
-        [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"/^01[1,2,0][0-9]{8}$/", ErrorMessage = "Not a valid phone number")]
+        //[MinLength(14),MaxLength(14)]
+        //[DataType(DataType.PhoneNumber)]
+        //[RegularExpression(@"/^01[1,2,0][0-9]{8}$/", ErrorMessage = "Not a valid phone number")]
 
         public String client_phone { get; set; }
 
         //Navigation Property
-        public virtual ICollection<Sales_Invoice> client_sales_Invoices { get;}
+        public virtual ICollection<Sales_Invoice> client_sales_Invoices { get; set; }
     }
 }

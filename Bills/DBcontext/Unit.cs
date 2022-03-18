@@ -20,6 +20,6 @@ namespace Bills.DBcontext
         public string unt_notes { get; set; }
 
         //Navigation Property
-        public virtual ICollection<Item> Items { get;}
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

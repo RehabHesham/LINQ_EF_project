@@ -21,7 +21,8 @@ namespace Bills.DBcontext
 
         //Navigation Property
         public virtual ICollection<Type_p> company_types { get; set; }
-        public virtual ICollection<Item> company_items { get; set; }
+
+        //public virtual ICollection<Item> company_items { get; set; }
 
     }
 }

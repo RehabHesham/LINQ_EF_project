@@ -11,51 +11,50 @@ using Bills.DBcontext;
 
 namespace Bills.UI
 {
-    public partial class companyForm : Form
+    public partial class unitform : Form
     {
         BillSystemDB db;
-        public companyForm()
+        public unitform()
         {
             InitializeComponent();
             db = new BillSystemDB();
         }
 
-        private void btn_compSave_Click(object sender, EventArgs e)
+        private void btn_unitsave_Click(object sender, EventArgs e)
         {
-            var Type_data = db.Companies.SingleOrDefault(com => com.company_name == txt_compName.Text);
-            if (txt_compName.Text != "")
+            var Type_data = db.Units.SingleOrDefault(ui => ui.unt_name == txt_unitName.Text);
+            if (txt_unitName.Text != "")
             {
                 if (Type_data == null)
                 {
-                    Company co = new Company()
+                    Unit u = new Unit()
                     {
-                        company_name = txt_compName.Text,
-                        company_notes = txt_compNotes.Text
+                      unt_name = txt_unitName.Text,
+                      unt_notes = txt_unitNotes.Text
                     };
-                    
-                    db.Companies.Add(co);
+
+                    db.Units.Add(u);
                     db.SaveChanges();
                     label_error.Text = "Done";
                     label_error.ForeColor = Color.Green;
                 }
                 else
                 {
-                    label_error.Text = "Company Name has already existed before";
+                    label_error.Text = "Unit Name has already existed before";
                     label_error.ForeColor = Color.Red;
                 }
             }
             else
             {
-                label_error.Text = "company Name is Required";
+                label_error.Text = "Unit Name is Required";
                 label_error.ForeColor = Color.Red;
             }
         }
 
-        private void btn_compCancle_Click(object sender, EventArgs e)
+        private void btn_unitCancel_Click(object sender, EventArgs e)
         {
-            txt_compName.Text = txt_compNotes.Text = "";
+            txt_unitName.Text = txt_unitNotes.Text = "";
             label_error.Text = "";
-
         }
     }
 }

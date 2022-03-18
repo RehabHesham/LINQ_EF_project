@@ -24,19 +24,20 @@ namespace Bills.DBcontext
         public decimal sell_price { get; set; }
 
         //[Required(ErrorMessage = "COMPANY NAME is Required")]
-        [ForeignKey("item_company")]
-        public int? company_id { get; set; }
-        //[Required(ErrorMessage = "TYPE NAME is Required")]
+        //[ForeignKey("item_company")]
+        //public int? company_id { get; set; }
+        [Required(ErrorMessage = "TYPE NAME is Required")]
         [ForeignKey("item_type")]
-        public int? type_id { get; set; }
-        //[Required(ErrorMessage = "UNIT NAME is Required")]
+        public int type_id { get; set; }
+        [Required(ErrorMessage = "UNIT NAME is Required")]
         [ForeignKey("item_unit")]
         public int unit_id { get; set; }
 
         //Navigation Property
-        public virtual Company item_company { get; set; }
-        public virtual Type_p item_type { get; set; }
-        public virtual Unit item_unit { get; set; }
+       // public virtual Company item_company { get; set; }
+        public Type_p item_type { get; set; }
+        public Unit item_unit { get; set; }
         public virtual ICollection<Invoive_items> invoive_items { get; set; }
+
     }
 }

@@ -112,6 +112,7 @@
             this.btn_sales.Size = new System.Drawing.Size(181, 38);
             this.btn_sales.TabIndex = 7;
             this.btn_sales.UseVisualStyleBackColor = false;
+            this.btn_sales.Click += new System.EventHandler(this.btn_sales_Click);
             // 
             // btn_invoice
             // 
@@ -143,6 +144,7 @@
             this.btn_client.Size = new System.Drawing.Size(181, 38);
             this.btn_client.TabIndex = 5;
             this.btn_client.UseVisualStyleBackColor = false;
+            this.btn_client.Click += new System.EventHandler(this.btn_client_Click);
             // 
             // btn_item
             // 
@@ -158,6 +160,7 @@
             this.btn_item.Size = new System.Drawing.Size(181, 38);
             this.btn_item.TabIndex = 4;
             this.btn_item.UseVisualStyleBackColor = false;
+            this.btn_item.Click += new System.EventHandler(this.btn_item_Click);
             // 
             // btn_unit
             // 
@@ -173,6 +176,7 @@
             this.btn_unit.Size = new System.Drawing.Size(181, 38);
             this.btn_unit.TabIndex = 3;
             this.btn_unit.UseVisualStyleBackColor = false;
+            this.btn_unit.Click += new System.EventHandler(this.btn_unit_Click);
             // 
             // btn_home
             // 
@@ -204,6 +208,7 @@
             this.btn_type.Size = new System.Drawing.Size(181, 38);
             this.btn_type.TabIndex = 2;
             this.btn_type.UseVisualStyleBackColor = false;
+            this.btn_type.Click += new System.EventHandler(this.btn_type_Click);
             // 
             // btn_company
             // 
@@ -225,6 +230,7 @@
             // 
             // pan_content
             // 
+            this.pan_content.AutoScroll = true;
             this.pan_content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pan_content.Location = new System.Drawing.Point(215, 46);
             this.pan_content.Margin = new System.Windows.Forms.Padding(0);
